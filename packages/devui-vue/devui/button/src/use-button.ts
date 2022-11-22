@@ -16,6 +16,7 @@ export default function useButton(props: ButtonProps, ctx: SetupContext): UseBut
 
   const buttonGroupConf = inject(buttonGroupInjectionKey, null);
   const buttonSize = computed(() => {
+    // group > self
     return buttonGroupConf?.size.value || props.size;
   });
 
